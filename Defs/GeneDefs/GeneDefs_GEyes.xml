@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<GeneDef>
+		<defName>Homestuck_Goldblood_Eyes</defName>
+		<label>Psiionic Eyes</label>
+		<labelShortAdj>Psiionic Eyes</labelShortAdj>
+		<displayCategory>Homestuck_Blood</displayCategory>
+		<description>Carriers of this gene have often heterochromic, solid color eyes.</description>
+		<displayOrderInCategory>16</displayOrderInCategory>
+	</GeneDef>
+</Defs>

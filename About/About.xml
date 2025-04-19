@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Homestuck Trolls Xenotype</name>
+	<author>Wolfystarrs</author>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<packageId>Xenotype.Homestuck.Trolls</packageId>
+	<description>
+Adds Trolls from homestuck as a race! Trolls are a grey-skinned, candy-corn-horned, violent race from alternia. 
+
+Biotech should be installed for blood colours, Humanoid alien races is needed for everything to work and Alpha Genes has some of the genes the trolls use, although it can technically run without it.
+</description>
+	<modDependencies>
+   <li>
+      <packageId>erdelf.HumanoidAlienRaces</packageId>
+      <displayName>Humanoid Alien Races 2.0</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+   </li>
+    <li>
+      <packageId>sarg.alphagenes</packageId>
+      <displayName>Outland - Genetics</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2910172297</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+</ModMetaData>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <CultureDef>
+    <defName>HS_Tradition</defName>
+    <label>Alternian Tradition</label>
+    <description>Culture from alternia.</description>
+	<pawnNameMaker MayRequire="Ludeon.RimWorld.Ideology">TrollNamer</pawnNameMaker>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityRustican</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerRustican</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Rustican</leaderTitleMaker>
+    <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalRustican</festivalNameMaker>
+    <iconPath>UI/Troll_Hive</iconPath>
+    <iconColor>(0.5, 0.5, 0.5)</iconColor>
+<allowedPlaceTags>
+<li>OriginSpacer</li>
+</allowedPlaceTags>
+<styleItemTags>
+      <li>
+      <tag>NoBeard</tag>
+      <baseWeight>10</baseWeight>
+      <weightFactor>1</weightFactor>
+      </li>
+      <li>
+      <tag>NoTattoo</tag>
+      <baseWeight>1</baseWeight>
+      <weightFactor>1</weightFactor>
+      </li>
+</styleItemTags>
+  </CultureDef>
+
+</Defs> 
