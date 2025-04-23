@@ -341,13 +341,13 @@
                  <!-- <swaddle>
                     <path>Things/Troll/Wrigglers/wriggler_andy</path>
                 </swaddle> 
-                    <skinColor>(0.76,0.76,0.76,1)</skinColor> -->
+                    <skinColor>(0.76,0.76,0.76,1)</skinColor> 
                     <bodyMasks>
                         <path>ChickenRace/Pawn/Tail/DefaultTail</path>
                         <Age For="HumanlikeChild">
                             <path>Things/Troll/Wrigglers/wriggler_andy</path>
                         </Age>
-                    </bodyMasks>
+                    </bodyMasks>-->
             </graphicPaths>
             <!--RACE RESTRICTION-->
             <raceRestriction>
