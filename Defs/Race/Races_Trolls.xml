@@ -843,7 +843,11 @@
                     </li>
                     <li>
                         <defName>Homestuck_Goldblood_Eyes</defName>
-                        <chance>100</chance>
+                        <chance>5</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_Seadweller</defName>
+                        <chance>5</chance>
                     </li>
                       </raceGenes>
                 <alienPartGenerator>
@@ -1341,7 +1345,7 @@
                                 </first>
                                 
                                 <second Class="ColorGenerator_Single">
-                                            <color>RGBA(0, 33, 203, 255)</color>
+                                            <color>RGBA(43, 0, 87, 255)</color>
                                 </second>
                                 
                             </li>
@@ -1351,13 +1355,13 @@
                                             <color>RGBA(0,0,0,1)</color>
                                 </first>
                                 <second Class="ColorGenerator_Single"><!--Hair Accessory Colors if available-->
-                                            <color>RGBA(0, 33, 203, 255)</color>
+                                            <color>RGBA(43, 0, 87, 255)</color>
                                 </second>
                             </li>
                         <li>
                             <name>favorite</name>
                             <first Class="ColorGenerator_Single">
-                                        <color>RGBA(0, 33, 203, 255)</color>
+                                        <color>RGBA(43, 0, 87, 255)</color>
                             </first>
                             <second Class="ColorGenerator_Single">
                                 <color>RGBA(255, 255, 255, 255)</color>
@@ -1411,69 +1415,13 @@
                     <li>
                         <defName MayRequire="sarg.alphagenes">PsychicAbility_Dull</defName>
                         <chance>66</chance>
-                    </li>  </raceGenes>
+                    </li>
+                    <li>
+                        <defName>Homestuck_Seadweller</defName>
+                        <chance>100</chance>
+                    </li>
+                      </raceGenes>
                 <alienPartGenerator>
-                    <bodyAddons>
-                            <li>   
-                                <conditions> 
-                                    <BodyPart>
-                                        <bodyPartLabel>fins</bodyPartLabel>
-                                        <drawWithoutPart>true</drawWithoutPart>
-                                    </BodyPart>
-                                    <RotStage>Fresh,Rotting</RotStage>
-                                </conditions>
-                                <path>Things/Troll/Fins/Fins</path>
-                                <inFrontOfBody>true</inFrontOfBody>
-                                <alignWithHead>true</alignWithHead>
-                                <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                                <colorChannel>skin</colorChannel>
-                                <allowColorOverride>true</allowColorOverride>
-                                <offsets>
-                                 <west>
-                                    <layerOffset>-0.3</layerOffset>
-                                </west>
-                                 <east>
-                                    <layerOffset>0.3</layerOffset>
-                                </east>
-                                </offsets>
-                            </li>
-                            <li>   
-                                <conditions> 
-                                    <BodyPart>
-                                        <bodyPartLabel>tail</bodyPartLabel>
-                                        <drawWithoutPart>true</drawWithoutPart>
-                                    </BodyPart>
-                                    <RotStage>Fresh,Rotting</RotStage>
-                                    <Not>
-                                        <Age>HumanlikeBaby</Age>
-                                    </Not>
-                                </conditions>
-                                <path>Things/Troll/Tails/Tail</path>
-                                <inFrontOfBody>true</inFrontOfBody>
-                                <alignWithHead>true</alignWithHead>
-                                <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                                <colorChannel>skin</colorChannel>
-                                <defaultOffset>Tail</defaultOffset>
-                                <offsets>
-                                <south>
-                                    <layerOffset>-0.3</layerOffset>
-                                    <offset>(-0.49,-0.44)</offset>
-                                </south>
-                                <north>
-                                    <layerOffset>-0.5</layerOffset>
-                                    <offset>(-0.03,-0.2)</offset>
-                                </north>
-                                <east>
-                                    <layerOffset>-0.3</layerOffset>
-                                    <offset>(-0.2,-0.44)</offset>
-                                </east>
-                                <west>
-                                    <layerOffset>-0.3</layerOffset>
-                                    <offset>(-0.2,-0.44)</offset>
-                                </west>
-                                </offsets>
-                            </li>
-                    </bodyAddons>
                         <colorChannels>
                     <li>                           
                                 <name>skin</name>
@@ -1558,71 +1506,12 @@
                         <defName MayRequire="sarg.alphagenes">AG_ToughSinews</defName>
                         <chance>100</chance>
                     </li>
+                    <li>
+                        <defName>Homestuck_Seadweller</defName>
+                        <chance>100</chance>
+                    </li>
                 </raceGenes>
                 <alienPartGenerator>
-                    <bodyAddons>
-                            <li>   
-                                <conditions> 
-                                    <BodyPart>
-                                        <bodyPartLabel>fins</bodyPartLabel>
-                                        <drawWithoutPart>true</drawWithoutPart>
-                                    </BodyPart>
-                                    <RotStage>Fresh,Rotting</RotStage>
-                                </conditions>
-                                <path>Things/Troll/Fins/Fins</path>
-                                <inFrontOfBody>true</inFrontOfBody>
-                                <alignWithHead>true</alignWithHead>
-                                <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                                <colorChannel>skin</colorChannel>
-                                <offsets>
-                                <south>
-                                    <layerOffset>-0.2733119</layerOffset>
-                                </south>
-                                 <west>
-                                    <layerOffset>-0.3</layerOffset>
-                                </west>
-                                 <east>
-                                    <layerOffset>0.3</layerOffset>
-                                </east>
-                                </offsets>
-                            </li>
-                            <li>   
-                                <conditions> 
-                                    <BodyPart>
-                                        <bodyPartLabel>tail</bodyPartLabel>
-                                        <drawWithoutPart>true</drawWithoutPart>
-                                    </BodyPart>
-                                    <RotStage>Fresh,Rotting</RotStage>
-                                    <Not>
-                                        <Age>HumanlikeBaby</Age>
-                                    </Not>
-                                </conditions>
-                                <path>Things/Troll/Tails/Tail</path>
-                                <inFrontOfBody>true</inFrontOfBody>
-                                <alignWithHead>true</alignWithHead>
-                                <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
-                                <colorChannel>skin</colorChannel>
-                                <defaultOffset>Tail</defaultOffset>
-                                <offsets>
-                                <south>
-                                    <layerOffset>-0.3</layerOffset>
-                                    <offset>(-0.49,-0.44)</offset>
-                                </south>
-                                <north>
-                                    <layerOffset>-0.5</layerOffset>
-                                    <offset>(-0.03,-0.2)</offset>
-                                </north>
-                                <east>
-                                    <layerOffset>-0.3</layerOffset>
-                                    <offset>(-0.2,-0.44)</offset>
-                                </east>
-                                <west>
-                                    <layerOffset>-0.3</layerOffset>
-                                    <offset>(-0.2,-0.44)</offset>
-                                </west>
-                                </offsets>
-                            </li>
-                    </bodyAddons>
                         <colorChannels>
                     <li>                           
                                 <name>skin</name>

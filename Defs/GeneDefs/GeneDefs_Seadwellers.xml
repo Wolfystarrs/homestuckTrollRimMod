@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+<GeneDef>
+		<defName>Homestuck_Seadweller</defName>
+		<label>Seadweller Traits</label>
+		<labelShortAdj>Seadweller Traits</labelShortAdj>
+		<displayCategory>Homestuck_Blood</displayCategory>
+		<description>Carriers of this gene have fish tails and fins.</description>
+		<displayOrderInCategory>16</displayOrderInCategory>
+	</GeneDef>
+</Defs>

@@ -373,6 +373,67 @@
                                 </south>
                             </offsets>
                         </li>
+                               <li>   
+                                <conditions> 
+                                    <BodyPart>
+                                        <bodyPartLabel>fins</bodyPartLabel>
+                                        <drawWithoutPart>true</drawWithoutPart>
+                                    </BodyPart>
+                                    <Gene>Homestuck_Seadweller</Gene>
+                                    <RotStage>Fresh,Rotting</RotStage>
+                                </conditions>
+                                <path>Things/Troll/Fins/Fins</path>
+                                <inFrontOfBody>true</inFrontOfBody>
+                                <alignWithHead>true</alignWithHead>
+                                <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                                <colorChannel>skin</colorChannel>
+                                <allowColorOverride>true</allowColorOverride>
+                                <offsets>
+                                 <west>
+                                    <layerOffset>-0.3</layerOffset>
+                                </west>
+                                 <east>
+                                    <layerOffset>0.3</layerOffset>
+                                </east>
+                                </offsets>
+                            </li>
+                            <li>   
+                                <conditions> 
+                                    <BodyPart>
+                                        <bodyPartLabel>tail</bodyPartLabel>
+                                        <drawWithoutPart>true</drawWithoutPart>
+                                    </BodyPart>
+                                    <RotStage>Fresh,Rotting</RotStage>
+                                    <Not>
+                                        <Age>HumanlikeBaby</Age>
+                                    </Not>
+                                    <Gene>Homestuck_Seadweller</Gene>
+                                </conditions>
+                                <path>Things/Troll/Tails/Tail</path>
+                                <inFrontOfBody>true</inFrontOfBody>
+                                <alignWithHead>true</alignWithHead>
+                                <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                                <colorChannel>skin</colorChannel>
+                                <defaultOffset>Tail</defaultOffset>
+                                <offsets>
+                                <south>
+                                    <layerOffset>-0.3</layerOffset>
+                                    <offset>(-0.49,-0.44)</offset>
+                                </south>
+                                <north>
+                                    <layerOffset>-0.5</layerOffset>
+                                    <offset>(-0.03,-0.2)</offset>
+                                </north>
+                                <east>
+                                    <layerOffset>-0.3</layerOffset>
+                                    <offset>(-0.2,-0.44)</offset>
+                                </east>
+                                <west>
+                                    <layerOffset>-0.3</layerOffset>
+                                    <offset>(-0.2,-0.44)</offset>
+                                </west>
+                                </offsets>
+                            </li>
         </universalBodyAddons> 
     </AlienRace.RaceSettings>
 </Defs> 
