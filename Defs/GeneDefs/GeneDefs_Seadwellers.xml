@@ -7,6 +7,7 @@
 		<labelShortAdj>Seadweller Traits</labelShortAdj>
 		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have fish tails and fins.</description>
+		<iconPath>Things/Troll/Fins/Fins_south</iconPath>
 		<displayOrderInCategory>16</displayOrderInCategory>
 	</GeneDef>
 </Defs>

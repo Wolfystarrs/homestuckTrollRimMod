@@ -7,6 +7,7 @@
 		<labelShortAdj>Psiionic Eyes</labelShortAdj>
 		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have often heterochromic, solid color eyes.</description>
+		<iconPath>Eyes/GEyes_Female_southm</iconPath>
 		<displayOrderInCategory>16</displayOrderInCategory>
 	</GeneDef>
 </Defs>
