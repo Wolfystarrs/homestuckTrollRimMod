@@ -561,6 +561,10 @@
                         <defName>Homestuck_Goldblood_Eyes</defName>
                         <chance>6</chance>
                     </li>
+                    <li>
+                        <defName>Homestuck_Seadweller</defName>
+                        <chance>5</chance>
+                    </li>
                       </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
@@ -843,11 +847,7 @@
                     </li>
                     <li>
                         <defName>Homestuck_Goldblood_Eyes</defName>
-                        <chance>5</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Seadweller</defName>
-                        <chance>5</chance>
+                        <chance>100</chance>
                     </li>
                       </raceGenes>
                 <alienPartGenerator>
