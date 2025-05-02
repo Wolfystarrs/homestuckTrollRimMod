@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="HatMakeableBase" Name="Sunglasses_Base" Abstract="True">
+		<description>A pair of sunglasses protecting the wearer from dangerous UV rays. Often considered to be ‘cool’.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<costList>
+			<Plasteel>10</Plasteel>
+		</costList>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>1000</WorkToMake>
+			<Mass>0.01</Mass>
+			<ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<Insulation_Cold>0</Insulation_Cold>
+			<Insulation_Heat>0</Insulation_Heat>
+			<EquipDelay>0.4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.05</SocialImpact>
+			<NegotiationAbility>0.05</NegotiationAbility>
+		</equippedStatOffsets>
+		<thingCategories Inherit='False'>
+			<li>Headgear</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Eyes</li>
+			</bodyPartGroups>
+			<wornGraphicPath>glasses/TT_glasses/ds_glasses</wornGraphicPath>
+			
+			<layers>
+				<li>EyeCover</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<recipeMaker>
+			<researchPrerequisite>VAE_CasualWear</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+<ThingDef ParentName="Sunglasses_Base">
+		<defName>HS_TT_glasses</defName>
+		<label>Triangular Sunglasses</label>
+        <graphicData>
+			<texPath>glasses/TT_Glasses/ds_glasses</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>glasses/TT_Glasses/ds_glasses</wornGraphicPath>
+		</apparel>
+</ThingDef>
+<ThingDef ParentName="Sunglasses_Base">
+		<defName>HS_EB_glasses</defName>
+		<label>Square Glasses</label>
+        <graphicData>
+			<texPath>glasses/EB_Glasses/eb_glasses</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>glasses/EB_Glasses/eb_glasses</wornGraphicPath>
+		</apparel>
+</ThingDef>
+</Defs>
