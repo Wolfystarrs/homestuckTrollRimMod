@@ -34,7 +34,7 @@
 			<bodyPartGroups>
 				<li>Eyes</li>
 			</bodyPartGroups>
-			<wornGraphicPath>glasses/TT_glasses/ds_glasses</wornGraphicPath>
+			<wornGraphicPath>Glasses/TT_Glasses/ds_glasses</wornGraphicPath>
 			
 			<layers>
 				<li>EyeCover</li>
@@ -46,8 +46,9 @@
 				<li>Worker</li>
 			</defaultOutfitTags>
 		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel"/>
 		<recipeMaker>
-			<researchPrerequisite>VAE_CasualWear</researchPrerequisite>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>5</Crafting>
 			</skillRequirements>
@@ -62,20 +63,20 @@
 		<defName>HS_TT_glasses</defName>
 		<label>Triangular Sunglasses</label>
         <graphicData>
-			<texPath>glasses/TT_Glasses/ds_glasses</texPath>
+			<texPath>Glasses/TT_Glasses/ds_glasses</texPath>
 		</graphicData>
 		<apparel>
-			<wornGraphicPath>glasses/TT_Glasses/ds_glasses</wornGraphicPath>
+			<wornGraphicPath>Glasses/TT_Glasses/ds_glasses</wornGraphicPath>
 		</apparel>
 </ThingDef>
 <ThingDef ParentName="Sunglasses_Base">
 		<defName>HS_EB_glasses</defName>
 		<label>Square Glasses</label>
         <graphicData>
-			<texPath>glasses/EB_Glasses/eb_glasses</texPath>
+			<texPath>Glasses/EB_Glasses/eb_glasses</texPath>
 		</graphicData>
 		<apparel>
-			<wornGraphicPath>glasses/EB_Glasses/eb_glasses</wornGraphicPath>
+			<wornGraphicPath>Glasses/EB_Glasses/eb_glasses</wornGraphicPath>
 		</apparel>
 </ThingDef>
 </Defs>

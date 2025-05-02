@@ -338,41 +338,6 @@
             </alienrefugeekinds>
         </pawnKindSettings>
          <universalBodyAddons>
-           
-                        <li>
-                            <path>Eyes/GEyes_Male</path>
-                            <conditions>
-                                <RotStage></RotStage>
-                                <Gene>Homestuck_Goldblood_Eyes</Gene>
-                                <Gender>Male</Gender>
-                            </conditions>
-                            <userCustomizable>false</userCustomizable>
-                            <alignWithHead>true</alignWithHead>
-                            <colorChannel>eyes</colorChannel>
-                            <inFrontOfBody>true</inFrontOfBody>
-                            <offsets>
-                                <south>
-                                    <layerOffset>-0.2733119</layerOffset>
-                                </south>
-                            </offsets>
-                        </li>
-                        <li>
-                            <path>Eyes/GEyes_Female</path>
-                            <conditions>
-                                <RotStage></RotStage>
-                                <Gene>Homestuck_Goldblood_Eyes</Gene>
-                                <Gender>Female</Gender>
-                            </conditions>
-                            <userCustomizable>false</userCustomizable>
-                            <alignWithHead>true</alignWithHead>
-                            <colorChannel>eyes</colorChannel>
-                            <inFrontOfBody>true</inFrontOfBody>
-                            <offsets>
-                                <south>
-                                    <layerOffset>-0.2733119</layerOffset>
-                                </south>
-                            </offsets>
-                        </li>
                                <li>   
                                 <conditions> 
                                     <BodyPart>

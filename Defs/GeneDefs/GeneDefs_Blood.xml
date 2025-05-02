@@ -2,38 +2,89 @@
 <Defs>
 
 	<GeneCategoryDef>
-		<defName>Homestuck_Blood</defName>
-		<label>blood</label>
-		<displayPriorityInXenotype>272</displayPriorityInXenotype>
-		<displayPriorityInGenepack>-118</displayPriorityInGenepack>
+			<defName>Homestuck_Blood</defName>
+			<label>blood</label>
+			<displayPriorityInXenotype>272</displayPriorityInXenotype>
+			<displayPriorityInGenepack>-118</displayPriorityInGenepack>
 	</GeneCategoryDef>
+	
+	<GeneDef Abstract="True" Name="BaseTrollBloodKind">
+		<defName>Homestuck_Blood</defName>
+		<label>Blood</label>
+		<displayCategory>Homestuck_Blood</displayCategory>
+	</GeneDef>
+	
+	<ThingDef ParentName="BaseFilth" Abstract="True" Name="BaseTrollFilthBloodKind">
+		<defName>Troll_Filth_Blood</defName>
+		<label>blood</label>
+		<statBases>
+			<Beauty>-30</Beauty>
+			<Cleanliness>-10</Cleanliness>
+		</statBases>
+		<filth>
+			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+			<disappearsInDays>35~40</disappearsInDays>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+		</filth>
+	</ThingDef>
+
+	<!-- <EffecterDef  Abstract="True" Name="BaseTrollDamageBloodKind">
+		<defName>Troll_Damage_Blood</defName>
+	</EffecterDef> -->
+
+	<FleshTypeDef  Abstract="True" Name="BaseTrollFleshBloodKind">
+		<defName>Troll_Flesh_Blood</defName>
+		<corpseCategory>CorpsesAnimal</corpseCategory>
+	</FleshTypeDef>
+
 	<!--RUST-->
-	<GeneDef>
+	<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Rust</defName>
 		<label>rust blood</label>
 		<labelShortAdj>rust-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have red blood.</description>
+		<description>Carriers of this gene have rust red blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(126, 4, 0)</iconColor>
 		<displayOrderInCategory>2</displayOrderInCategory>
 			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(126, 4, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(126, 4, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodRust</customBloodThingDef>
@@ -44,25 +95,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodRust</defName>
-		<label>rust blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(126, 4, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -74,15 +112,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(126, 4, 0)</color>
+				<color>(126, 4, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodRust</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodRust</damageEffecter>
 		<genericWounds>
 			<li>
@@ -102,32 +139,50 @@
 
 
 <!--BRONZE-->
-	<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Bronze</defName>
 		<label>bronze blood</label>
 		<labelShortAdj>bronze-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have bronze </description>
+		<description>Carriers of this gene have bronze blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(162, 82, 3)</iconColor>
 		<displayOrderInCategory>3</displayOrderInCategory>
 			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(162, 82, 3)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(162, 82, 3)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodBronze</customBloodThingDef>
@@ -138,25 +193,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodBronze</defName>
-		<label>Bronze blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(162, 82, 3, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -168,15 +210,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(162, 82, 3)</color>
+				<color>(162, 82, 3, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodBronze</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodBronze</damageEffecter>
 		<genericWounds>
 			<li>
@@ -194,34 +235,51 @@
 		</genericWounds>
 	</FleshTypeDef>
 
-
 <!--GOLD-->
-	<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Gold</defName>
 		<label>gold blood</label>
 		<labelShortAdj>gold-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have gold </description>
+		<description>Carriers of this gene have gold blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(161, 161, 0)</iconColor>
 		<displayOrderInCategory>4</displayOrderInCategory>
 			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(161, 161, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(161, 161, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodGold</customBloodThingDef>
@@ -232,25 +290,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodGold</defName>
-		<label>Gold blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(161, 161, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -262,15 +307,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(161, 161, 0)</color>
+				<color>(161, 161, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodGold</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodGold</damageEffecter>
 		<genericWounds>
 			<li>
@@ -289,32 +333,50 @@
 	</FleshTypeDef>
 
 	<!--LIME-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Lime</defName>
 		<label>lime blood</label>
 		<labelShortAdj>lime-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have lime </description>
+		<description>Carriers of this gene have lime blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(101, 130, 0)</iconColor>
 		<displayOrderInCategory>5</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(101, 130, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(101, 130, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodLime</customBloodThingDef>
@@ -325,25 +387,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodLime</defName>
-		<label>Lime blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(101, 130, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -355,15 +404,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(101, 130, 0)</color>
+				<color>(101, 130, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodLime</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodLime</damageEffecter>
 		<genericWounds>
 			<li>
@@ -381,32 +429,50 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--OLIVE-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Olive</defName>
 		<label>olive blood</label>
 		<labelShortAdj>olive-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have olive </description>
+		<description>Carriers of this gene have olive blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(65, 102, 0)</iconColor>
 		<displayOrderInCategory>6</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(65, 102, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(65, 102, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodOlive</customBloodThingDef>
@@ -417,25 +483,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodOlive</defName>
-		<label>Olive blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(65, 102, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -447,15 +500,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(65, 102, 0)</color>
+				<color>(65, 102, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodOlive</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodOlive</damageEffecter>
 		<genericWounds>
 			<li>
@@ -473,32 +525,50 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--JADE-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Jade</defName>
 		<label>jade blood</label>
 		<labelShortAdj>jade-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have jade </description>
+		<description>Carriers of this gene have jade blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(7, 132, 70)</iconColor>
 		<displayOrderInCategory>7</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(7, 132, 70)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(7, 132, 70)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodJade</customBloodThingDef>
@@ -509,25 +579,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodJade</defName>
-		<label>Jade blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(7, 132, 70, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -539,15 +596,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(7, 132, 70)</color>
+				<color>(7, 132, 70, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodJade</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodJade</damageEffecter>
 		<genericWounds>
 			<li>
@@ -564,33 +620,52 @@
 			</li>
 		</genericWounds>
 	</FleshTypeDef>
+
 	<!--TEAL-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Teal</defName>
 		<label>teal blood</label>
 		<labelShortAdj>teal-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have teal </description>
+		<description>Carriers of this gene have teal blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(0, 130, 130)</iconColor>
 		<displayOrderInCategory>8</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(0, 130, 130)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(0, 130, 130)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodTeal</customBloodThingDef>
@@ -601,25 +676,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodTeal</defName>
-		<label>Teal blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(0, 130, 130, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -631,15 +693,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(0, 130, 130)</color>
+				<color>(0, 130, 130, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodTeal</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodTeal</damageEffecter>
 		<genericWounds>
 			<li>
@@ -656,33 +717,52 @@
 			</li>
 		</genericWounds>
 	</FleshTypeDef>
+
 	<!--CERULEAN-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Cerulean</defName>
 		<label>cerulean blood</label>
 		<labelShortAdj>cerulean-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have cerulean </description>
+		<description>Carriers of this gene have cerulean blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(0, 65, 130)</iconColor>
 		<displayOrderInCategory>9</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(0, 65, 130)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(0, 65, 130)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodCerulean</customBloodThingDef>
@@ -693,25 +773,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodCerulean</defName>
-		<label>Cerulean blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(0, 65, 130, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -723,15 +790,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(0, 65, 130)</color>
+				<color>(0, 65, 130, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodCerulean</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodCerulean</damageEffecter>
 		<genericWounds>
 			<li>
@@ -748,33 +814,52 @@
 			</li>
 		</genericWounds>
 	</FleshTypeDef>
+
 	<!--INDIGO-->
-		<GeneDef>
+	<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Indigo</defName>
 		<label>indigo blood</label>
 		<labelShortAdj>indigo-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have indigo </description>
+		<description>Carriers of this gene have indigo blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(0, 33, 203)</iconColor>
 		<displayOrderInCategory>10</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(0, 33, 203)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(0, 33, 203)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodIndigo</customBloodThingDef>
@@ -785,25 +870,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodIndigo</defName>
-		<label>Indigo blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(0, 33, 203, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -815,15 +887,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(0, 33, 203)</color>
+				<color>(0, 33, 203, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodIndigo</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodIndigo</damageEffecter>
 		<genericWounds>
 			<li>
@@ -841,32 +912,50 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--PURPLE-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Purple</defName>
 		<label>purple blood</label>
 		<labelShortAdj>purple-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have purple </description>
+		<description>Carriers of this gene have purple blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(43, 0, 87)</iconColor>
 		<displayOrderInCategory>11</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(43, 0, 87)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(43, 0, 87)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodPurple</customBloodThingDef>
@@ -877,25 +966,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodPurple</defName>
-		<label>Purple blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(43, 0, 87, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -907,15 +983,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(43, 0, 87)</color>
+				<color>(43, 0, 87, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodPurple</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodPurple</damageEffecter>
 		<genericWounds>
 			<li>
@@ -933,32 +1008,50 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--VIOLET-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Violet</defName>
 		<label>violet blood</label>
 		<labelShortAdj>violet-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have violet </description>
+		<description>Carriers of this gene have violet blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(97, 0, 97)</iconColor>
 		<displayOrderInCategory>12</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(97, 0, 97)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(97, 0, 97)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodViolet</customBloodThingDef>
@@ -969,25 +1062,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodViolet</defName>
-		<label>Violet blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(97, 0, 97, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -999,15 +1079,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(97, 0, 97)</color>
+				<color>(97, 0, 97, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodViolet</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodViolet</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1025,32 +1104,50 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--FUCHSIA-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Fuchsia</defName>
 		<label>fuchsia blood</label>
 		<labelShortAdj>fuchsia-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have fuchsia </description>
+		<description>Carriers of this gene have fuchsia blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(153, 0, 77)</iconColor>
 		<displayOrderInCategory>13</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(153, 0, 77)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(153, 0, 77)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodFuchsia</customBloodThingDef>
@@ -1061,25 +1158,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodFuchsia</defName>
-		<label>Fuchsia blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(153, 0, 77, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1091,15 +1175,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(153, 0, 77)</color>
+				<color>(153, 0, 77, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodFuchsia</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodFuchsia</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1117,32 +1200,50 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--CANDY RED-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKind">
 		<defName>Homestuck_Blood_Candy_Red</defName>
 		<label>candy red blood</label>
 		<labelShortAdj>candy-red-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have candy red </description>
+		<description>Carriers of this gene have candy red blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(255, 0, 0)</iconColor>
 		<displayOrderInCategory>1</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(255, 0, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(255, 0, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodCandy_Red</customBloodThingDef>
@@ -1153,25 +1254,12 @@
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodCandy_Red</defName>
-		<label>Candy_Red blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(255, 0, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1183,15 +1271,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(255, 0, 0)</color>
+				<color>(255, 0, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodCandy_Red</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodCandy_Red</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1208,62 +1295,70 @@
 			</li>
 		</genericWounds>
 	</FleshTypeDef>
+	<!--BASE MUTANT-->
+	<GeneDef Abstract="True" Name="BaseTrollBloodKindMutant" ParentName="BaseTrollBloodKind">
+		<displayOrderInCategory>15</displayOrderInCategory>
+	</GeneDef>
 	<!--MUTANT COLOUR ONE- CHARTREUSE- BASED OFF CSAU-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Chartreuse</defName>
 		<label>chartreuse blood</label>
 		<labelShortAdj>chartreuse-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have chartreuse </description>
+		<description>Carriers of this gene have chartreuse blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(32, 207, 33)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(32, 207, 33)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(32, 207, 33)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodChartreuse</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingChartreuse</customBloodIcon>
+				<customBloodIcon>Medical/BleedingChartreuse</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodChartreuse</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodChartreuse</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodChartreuse</defName>
-		<label>Chartreuse blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(32, 207, 33, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1275,15 +1370,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(32, 207, 33)</color>
+				<color>(32, 207, 33, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodChartreuse</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodChartreuse</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1301,61 +1395,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT COLOR TWO- AZURE- BASED OFF OF CSAU-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Azure</defName>
 		<label>azure blood</label>
 		<labelShortAdj>azure-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have azure </description>
+		<description>Carriers of this gene have azure blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(0, 132, 255)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(0, 132, 255)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(0, 132, 255)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodAzure</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingAzure</customBloodIcon>
+				<customBloodIcon>Medical/BleedingAzure</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodAzure</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodAzure</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodAzure</defName>
-		<label>Azure blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(0, 132, 255, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1367,15 +1465,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(0, 132, 255)</color>
+				<color>(0, 132, 255, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodAzure</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodAzure</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1393,61 +1490,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT THREE- LILAC- BASED OFF OF CSAU-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Lilac</defName>
 		<label>lilac blood</label>
 		<labelShortAdj>lilac-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have lilac </description>
+		<description>Carriers of this gene have lilac blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(179, 46, 219)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(179, 46, 219)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(179, 46, 219)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodLilac</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingLilac</customBloodIcon>
+				<customBloodIcon>Medical/BleedingLilac</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodLilac</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodLilac</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodLilac</defName>
-		<label>Lilac blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(179, 46, 219, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1459,15 +1560,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(179, 46, 219)</color>
+				<color>(179, 46, 219, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodLilac</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodLilac</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1485,61 +1585,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT FOUR - EMERALD-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Emerald</defName>
 		<label>emerald blood</label>
 		<labelShortAdj>emerald-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have emerald </description>
+		<description>Carriers of this gene have emerald blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(18, 104, 70)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(18, 104, 70)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(18, 104, 70)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodEmerald</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingEmerald</customBloodIcon>
+				<customBloodIcon>Medical/BleedingEmerald</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodEmerald</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodEmerald</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodEmerald</defName>
-		<label>Emerald blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(18, 104, 70, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1551,15 +1655,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(18, 104, 70)</color>
+				<color>(18, 104, 70, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodEmerald</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodEmerald</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1577,61 +1680,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT FIVE - PINK-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Pink</defName>
 		<label>pink blood</label>
 		<labelShortAdj>pink-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have pink </description>
+		<description>Carriers of this gene have pink blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(236, 0, 201)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(236, 0, 201)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(236, 0, 201)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodPink</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingPink</customBloodIcon>
+				<customBloodIcon>Medical/BleedingPink</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodPink</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodPink</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodPink</defName>
-		<label>Pink blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(236, 0, 201, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1643,15 +1750,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(236, 0, 201)</color>
+				<color>(236, 0, 201, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodPink</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodPink</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1669,61 +1775,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT SIX IVORY-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Ivory</defName>
 		<label>ivory blood</label>
 		<labelShortAdj>ivory-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have ivory blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(255, 255, 255)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(255, 255, 255)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(255, 255, 255)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(255, 255, 255)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodIvory</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingIvory</customBloodIcon>
+				<customBloodIcon>Medical/BleedingIvory</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodIvory</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodIvory</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodIvory</defName>
-		<label>Ivory blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(255, 255, 255, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1735,15 +1845,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(255, 255, 255)</color>
+				<color>(255, 255, 255, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodIvory</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodIvory</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1761,61 +1870,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT SEVEN - EBONY-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Ebony</defName>
 		<label>ebony blood</label>
 		<labelShortAdj>ebony-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have ebony blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(0, 0, 0)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(0, 0, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(0, 0, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(0, 0, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodEbony</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingEbony</customBloodIcon>
+				<customBloodIcon>Medical/BleedingEbony</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodEbony</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodEbony</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodEbony</defName>
-		<label>Ebony blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(0, 0, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1827,15 +1940,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(0, 0, 0)</color>
+				<color>(0, 0, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodEbony</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodEbony</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1853,61 +1965,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT EIGHT- MAGENTA -->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Magenta</defName>
 		<label>magenta blood</label>
 		<labelShortAdj>magenta-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have magenta blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(189, 0, 182)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(189, 0, 182)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(189, 0, 182)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(189, 0, 182)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodMagenta</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingMagenta</customBloodIcon>
+				<customBloodIcon>Medical/BleedingMagenta</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodMagenta</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodMagenta</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodMagenta</defName>
-		<label>Magenta blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(189, 0, 182, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -1919,15 +2035,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(189, 0, 182)</color>
+				<color>(189, 0, 182, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodMagenta</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodMagenta</damageEffecter>
 		<genericWounds>
 			<li>
@@ -1945,61 +2060,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT NINE - MINT-->
-		<GeneDef>
+	<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Mint</defName>
 		<label>mint blood</label>
 		<labelShortAdj>mint-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have mint blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(61, 180, 137)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(61, 180, 137)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(61, 180, 137)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(61, 180, 137)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodMint</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingMint</customBloodIcon>
+				<customBloodIcon>Medical/BleedingMint</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodMint</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodMint</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodMint</defName>
-		<label>Mint blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(61, 180, 137, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2011,15 +2130,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(61, 180, 137)</color>
+				<color>(61, 180, 137, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodMint</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodMint</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2037,61 +2155,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT TEN - COPPER-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Copper</defName>
 		<label>copper blood</label>
 		<labelShortAdj>copper-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have copper blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(99, 43, 3)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(99, 43, 3)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(99, 43, 3)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(99, 43, 3)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodCopper</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingCopper</customBloodIcon>
+				<customBloodIcon>Medical/BleedingCopper</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodCopper</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodCopper</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodCopper</defName>
-		<label>Copper blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(99, 43, 3, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2103,15 +2225,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(99, 43, 3)</color>
+				<color>(99, 43, 3, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodCopper</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodCopper</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2129,61 +2250,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT ELEVEN - IRON-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Iron</defName>
 		<label>iron blood</label>
 		<labelShortAdj>iron-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have iron blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(77, 84, 88)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(77, 84, 88)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(77, 84, 88)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(77, 84, 88)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodIron</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingIron</customBloodIcon>
+				<customBloodIcon>Medical/BleedingIron</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodIron</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodIron</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodIron</defName>
-		<label>Iron blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(77, 84, 88, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2195,15 +2320,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(77, 84, 88)</color>
+				<color>(77, 84, 88, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodIron</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodIron</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2221,61 +2345,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!-- MUTANT TWELVE - Salmon-->
-		<GeneDef>
+			<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Salmon</defName>
 		<label>salmon blood</label>
 		<labelShortAdj>salmon-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have salmon blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(235, 64, 52)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(235, 64, 52)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(235, 64, 52)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(235, 64, 52)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodSalmon</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingSalmon</customBloodIcon>
+				<customBloodIcon>Medical/BleedingSalmon</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodSalmon</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodSalmon</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodSalmon</defName>
-		<label>Salmon blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(235, 64, 52, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2287,15 +2415,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(235, 64, 52)</color>
+				<color>(235, 64, 52, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodSalmon</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodSalmon</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2313,61 +2440,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT THIRTEEN - ELECTRUM-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Electrum</defName>
 		<label>electrum blood</label>
 		<labelShortAdj>electrum-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have electrum blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(255, 221, 0)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(255, 221, 0)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(255, 221, 0)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(255, 221, 0)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodElectrum</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingElectrum</customBloodIcon>
+				<customBloodIcon>Medical/BleedingElectrum</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodElectrum</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodElectrum</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodElectrum</defName>
-		<label>Electrum blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(255, 221, 0, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2379,15 +2510,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(255, 221, 0)</color>
+				<color>(255, 221, 0, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodElectrum</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodElectrum</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2405,61 +2535,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT FOURTEEN - SILVER-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Silver</defName>
 		<label>silver blood</label>
 		<labelShortAdj>silver-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have silver blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(192, 192, 192)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(192, 192, 192)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(192, 192, 192)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(192, 192, 192)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodSilver</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingSilver</customBloodIcon>
+				<customBloodIcon>Medical/BleedingSilver</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodSilver</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodSilver</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodSilver</defName>
-		<label>Silver blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(192, 192, 192, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2471,15 +2605,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(192, 192, 192)</color>
+				<color>(192, 192, 192, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodSilver</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodSilver</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2497,7 +2630,7 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT FIFTHTEEN - RAINBOW-->
-		<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Rainbow</defName>
 		<label>rainbow blood</label>
 		<labelShortAdj>rainbow-blood</labelShortAdj>
@@ -2505,19 +2638,38 @@
 		<description>Carriers of this gene have rainbow blood.</description>
 		<iconPath>UI/Gene_Blood_Rainbow</iconPath>
 		<iconColor>(255, 255, 255)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+					<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture_Rainbow</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(255, 255, 255)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(255, 255, 255)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture_Rainbow</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(255, 255, 255)</color>
 			</li>
@@ -2541,7 +2693,7 @@
 			<Cleanliness>-10</Cleanliness>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Filth/Spatter</texPath>
+			<texPath>Filth/Spatter</texPath>
 			<color>(255, 255, 255, 180)</color>
 		</graphicData>
 		<filth>
@@ -2563,7 +2715,52 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(255, 255, 255)</color>
+				<color>(255, 0, 0)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>BloodSplash</fleckDef>
+				<burstCount>2~3</burstCount>
+				<scale>1.1~1.4</scale>
+				<color>(255, 255, 0)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>BloodSplash</fleckDef>
+				<burstCount>2~3</burstCount>
+				<scale>1.1~1.4</scale>
+				<color>(0, 255, 0)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>BloodSplash</fleckDef>
+				<burstCount>2~3</burstCount>
+				<scale>1.1~1.4</scale>
+				<color>(0, 255, 255)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>BloodSplash</fleckDef>
+				<burstCount>2~3</burstCount>
+				<scale>1.1~1.4</scale>
+				<color>(0, 0, 255)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>BloodSplash</fleckDef>
+				<burstCount>2~3</burstCount>
+				<scale>1.1~1.4</scale>
+				<color>(255, 0, 255)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
@@ -2589,61 +2786,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT SIXTEEN - BISMUTH-->
-	<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Bismuth</defName>
 		<label>bismuth blood</label>
 		<labelShortAdj>bismuth-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have bismuth blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(46, 34, 34)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(46, 34, 34)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(46, 34, 34)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(46, 34, 34)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodBismuth</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingBismuth</customBloodIcon>
+				<customBloodIcon>Medical/BleedingBismuth</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodBismuth</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodBismuth</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodBismuth</defName>
-		<label>Bismuth blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(46, 34, 34, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2655,15 +2856,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(46, 34, 34)</color>
+				<color>(46, 34, 34, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodBismuth</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodBismuth</damageEffecter>
 		<genericWounds>
 			<li>
@@ -2681,61 +2881,65 @@
 		</genericWounds>
 	</FleshTypeDef>
 	<!--MUTANT SEVENTEEN - TUNGSTEN-->
-	<GeneDef>
+		<GeneDef ParentName="BaseTrollBloodKindMutant">
 		<defName>Homestuck_Blood_Tungsten</defName>
 		<label>tungsten blood</label>
 		<labelShortAdj>tungsten-blood</labelShortAdj>
-		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have tungsten blood.</description>
 		<iconPath>UI/Gene_Blood</iconPath>
 		<iconColor>(26, 69, 30)</iconColor>
-		<displayOrderInCategory>15</displayOrderInCategory>
-		<renderNodeProperties>
+			<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Male</texPath>
-				<texPathFemale>Eyes/Eyes_Female</texPathFemale>
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
-				<drawSize>1.0</drawSize>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
 				<drawData>
-					<defaultData>
-						<layer>54</layer>
-						<offset>(26, 69, 30)</offset>
-					</defaultData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(26, 69, 30)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
 				</drawData>
 				<color>(26, 69, 30)</color>
 			</li>
 		</renderNodeProperties>
-		<selectionWeight>0</selectionWeight>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<customBloodThingDef>Troll_Filth_BloodTungsten</customBloodThingDef>
-				<customBloodIcon>Medical/Mutant_Bloods/BleedingTungsten</customBloodIcon>
+				<customBloodIcon>Medical/BleedingTungsten</customBloodIcon>
 				<customBloodEffect>Troll_Damage_BloodTungsten</customBloodEffect>
 				<customWoundsFromFleshtype>Troll_Flesh_BloodTungsten</customWoundsFromFleshtype>
 			</li>
 		</modExtensions>
 	</GeneDef>
 
-	<ThingDef ParentName="BaseFilth">
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
 		<defName>Troll_Filth_BloodTungsten</defName>
-		<label>Tungsten blood</label>
-		<statBases>
-			<Beauty>-30</Beauty>
-			<Cleanliness>-10</Cleanliness>
-		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Spatter</texPath>
 			<color>(26, 69, 30, 180)</color>
 		</graphicData>
-		<filth>
-			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
-			<disappearsInDays>35~40</disappearsInDays>
-			<rainWashes>true</rainWashes>
-			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
-			<canFilthAttach>true</canFilthAttach>
-			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
-		</filth>
 	</ThingDef>
 
 	<EffecterDef>
@@ -2747,15 +2951,14 @@
 				<fleckDef>BloodSplash</fleckDef>
 				<burstCount>2~3</burstCount>
 				<scale>1.1~1.4</scale>
-				<color>(26, 69, 30)</color>
+				<color>(26, 69, 30, 180)</color>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 		</children>
 	</EffecterDef>
 
-	<FleshTypeDef>
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
 		<defName>Troll_Flesh_BloodTungsten</defName>
-		<corpseCategory>CorpsesAnimal</corpseCategory>
 		<damageEffecter>Troll_Damage_BloodTungsten</damageEffecter>
 		<genericWounds>
 			<li>
