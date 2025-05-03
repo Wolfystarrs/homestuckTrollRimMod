@@ -23,7 +23,11 @@
 				<offset>(0, 0, -0.25)</offset>
 				</defaultData>
 				</drawData>
-				<color>(255, 0, 0)</color>
+				<colors>
+					<li>(255, 0, 0)</li>
+					<li>(0, 255, 0)</li>
+					<li>(0, 0, 255)</li>
+				</colors>
 			</li>
 			<li Class="PawnRenderNodeProperties_Eye">
 				<texPath>Eyes/Eyes_Texture</texPath>
@@ -42,7 +46,11 @@
 				<flip>false</flip>
 				</dataWest>
 				</drawData>
-				<color>(0, 0, 255)</color>
+				<colors>
+					<li>(255, 0, 0)</li>
+					<li>(0, 255, 0)</li>
+					<li>(0, 0, 255)</li>
+				</colors>
 			</li>
 		</renderNodeProperties>
 	</GeneDef>

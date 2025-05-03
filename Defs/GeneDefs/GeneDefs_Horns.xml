@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <GeneCategoryDef>
+			<defName>Troll_Horns</defName>
+			<label>Troll Horns</label>
+			<displayPriorityInXenotype>273</displayPriorityInXenotype>
+			<displayPriorityInGenepack>-118</displayPriorityInGenepack>
+	</GeneCategoryDef>
+
+    <GeneDef Name="homestuck_Horns_Base" Abstract="True">
+		<defName>Homestuck_Horns</defName>
+		<label>Troll Horns</label>
+		<labelShortAdj>Horns</labelShortAdj>
+		<displayCategory>Troll_Horns</displayCategory>
+		<description>Carriers of this gene have horns.</description>
+		<iconPath>Things/Troll/Horns/Horn1</iconPath>
+        <exclusionTags>
+          <li>Horns</li>
+        </exclusionTags>
+	</GeneDef>
+
+    <GeneDef ParentName="homestuck_Horns_Base">
+		<defName>Homestuck_Horns_Custom0</defName>
+		<label>Troll Horns</label>
+		<labelShortAdj>Horns</labelShortAdj>
+		<iconPath>Things/Troll/Horns/Horn0</iconPath>
+        <renderNodeProperties>
+            <li>
+				<texPath>Things/Troll/Horns/HornRight</texPath>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting, Dessicated</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<side>Right</side>
+				<drawData>
+				<defaultData>
+                    <layer>80</layer>
+                    <flip>true</flip>
+				</defaultData>
+				<dataNorth>
+                    <layer>10</layer>
+				</dataNorth>
+				<dataWest>
+                    <flip>false</flip>
+				</dataWest>
+				</drawData>
+			</li>
+			<li>
+				<texPath>Things/Troll/Horns/HornLeft</texPath>
+				<rotDrawMode>Fresh, Rotting, Dessicated</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+                    <layer>80</layer>
+                    <flip>true</flip>
+				</defaultData>
+				<dataNorth>
+                    <layer>10</layer>
+				</dataNorth>
+				<dataWest>
+                    <flip>false</flip>
+				</dataWest>
+				</drawData>
+			</li>
+        </renderNodeProperties>
+    </GeneDef>
+</Defs>

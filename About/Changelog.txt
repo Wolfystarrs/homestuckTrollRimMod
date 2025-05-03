@@ -14,6 +14,8 @@ Added more horn types
 Added Cerulean eyes gene
 Removed forced Night Owl trait but added high rates of bisexuality and polyamory for trolls 
 Added gender probability deviance for jade and fuchsia bloods
+Changed title to be more accurate
+Added metabolic gene to adjust for egg layer and insect jelly metabolic decreases
 
 0.1.0 - Initial release
 

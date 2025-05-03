@@ -3,10 +3,11 @@
 
 <GeneDef ParentName="GeneSkinColorOverride">
 		<defName>Homestuck_Troll_Skin</defName>
-		<label>grey skin</label>
+		<label>troll skin</label>
 		<labelShortAdj>grey</labelShortAdj>
-		<description>Carriers of this gene have a grey color to their skin.</description>
+		<description>Carriers of this gene have tough grey troll skin.</description>
 		<skinColorOverride>(196, 196, 196)</skinColorOverride>
 		<displayOrderInCategory>11</displayOrderInCategory>
+		<biostatMet>4</biostatMet>
 	</GeneDef>
 </Defs>

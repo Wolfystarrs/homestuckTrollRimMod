@@ -14,7 +14,7 @@
     <iconPath>UI/Troll_Hive</iconPath>
     <iconColor>(0.5, 0.5, 0.5)</iconColor>
 <allowedPlaceTags>
-<li>OriginSpacer</li>
+  <li>OriginSpacer</li>
 </allowedPlaceTags>
 <styleItemTags>
       <li>

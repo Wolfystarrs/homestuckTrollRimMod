@@ -20,10 +20,6 @@
                     <defName>Gay</defName>
                     <chance>10</chance>
                 </li>
-                <li>
-                    <defName>Polyamory</defName>
-                    <chance>90</chance>
-                </li>
                 </forcedRaceTraitEntries>
                 <disallowedTraits>
                     <li>
@@ -95,12 +91,6 @@
                         <defName MayRequire="sarg.alphagenes">AG_NightOwl</defName>
                         <chance>100</chance>
                     </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
-                        <chance>30</chance>
-                    </li>
-            
-                    
                 </raceGenes>
                 <reproduction>
                     <fertilizingGender>Either</fertilizingGender>
@@ -418,84 +408,76 @@
                         <chance>0.01</chance>
                     </li>
                     <li>
-                        <defName>MinTemp_SmallIncrease</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
                         <defName>Homestuck_Blood_Candy_Red</defName>
-                        <chance>3</chance>
+                        <chance>35</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Azure</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Bismuth</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Chartreuse</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Copper</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Ebony</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Electrum</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Emerald</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Iron</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Ivory</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Lilac</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Magenta</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Mint</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Pink</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Rainbow</defName>
-                        <chance>3</chance>
+                        <chance>1</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Salmon</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Silver</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Blood_Tungsten</defName>
-                        <chance>3</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName MayRequire="sarg.alphagenes">AG_UnderdevelopedTeeth</defName>
@@ -530,22 +512,6 @@
                         <chance>0.5</chance>
                     </li>
                     <li>
-                        <defName>MinTemp_SmallIncrease</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
-                        <defName>MinTemp_SmallDecrease</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
                         <chance>30</chance>
                     </li>
@@ -560,6 +526,54 @@
                     <li>
                         <defName>Homestuck_Seadweller</defName>
                         <chance>5</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_WarmBlooded_1</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_WarmBlooded_2</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_WarmBlooded_3</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_WarmBlooded_4</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_MidBlooded_1</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_MidBlooded_2</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_MidBlooded_3</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_MidBlooded_4</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_ColdBlooded_1</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_ColdBlooded_2</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_ColdBlooded_3</defName>
+                        <chance>7</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_ColdBlooded_4</defName>
+                        <chance>7</chance>
                     </li>
                       </raceGenes>
                 <alienPartGenerator>
@@ -658,15 +672,11 @@
                         <chance>0.1</chance>
                     </li>
                     <li>
-                        <defName>MinTemp_SmallIncrease</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_WarmBlooded_1</defName>
                         <chance>100</chance>
                     </li>
                       </raceGenes>
@@ -732,12 +742,8 @@
                         <chance>1</chance>
                     </li>
                     <li>
-                        <defName>MinTemp_SmallIncrease</defName>
-                        <chance>66</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>66</chance>
+                        <defName>Homestuck_WarmBlooded_2</defName>
+                        <chance>100</chance>
                     </li>
                     <li>
                         <defName>AptitudeStrong_Animals</defName>
@@ -818,16 +824,8 @@
                         <chance>0.1</chance>
                     </li>
                     <li>
-                        <defName>MinTemp_SmallIncrease</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
-                        <chance>33</chance>
+                        <defName>Homestuck_WarmBlooded_3</defName>
+                        <chance>100</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Goldblood_Eyes</defName>
@@ -904,12 +902,8 @@
                         <chance>0.1</chance>
                     </li>
                     <li>
-                        <defName>MinTemp_SmallIncrease</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>33</chance>
+                        <defName>Homestuck_WarmBlooded_4</defName>
+                        <chance>100</chance>
                     </li>
                     <li>
                         <defName>AptitudeStrong_Social</defName>
@@ -977,6 +971,10 @@
                         <defName>AptitudeStrong_Animals</defName>
                         <chance>25</chance>
                     </li>
+                    <li>
+                        <defName>Homestuck_MidBlooded_1</defName>
+                        <chance>100</chance>
+                    </li>
                       </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
@@ -1035,7 +1033,12 @@
                     <li>
                         <defName>Bloodfeeder</defName>
                         <chance>100</chance>
-                    </li>  </raceGenes>
+                    </li>  
+                    <li>
+                        <defName>Homestuck_MidBlooded_2</defName>
+                        <chance>100</chance>
+                    </li>
+                </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
                     <li>                           
@@ -1084,7 +1087,12 @@
                     <li>
                         <defName>Homestuck_Blood_Teal</defName>
                         <chance>100</chance>
-                    </li>  </raceGenes>
+                    </li>  
+                    <li>
+                        <defName>Homestuck_MidBlooded_3</defName>
+                        <chance>100</chance>
+                    </li>
+                </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
                     <li>                           
@@ -1149,7 +1157,12 @@
                     <li>
                         <defName MayRequire="sarg.alphagenes">AG_Spinnerets</defName>
                         <chance>10</chance>
-                    </li>  </raceGenes>
+                    </li>  
+                    <li>
+                        <defName>Homestuck_MidBlooded_4</defName>
+                        <chance>100</chance>
+                    </li>
+                </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
                     <li>                           
@@ -1212,12 +1225,8 @@
                         <chance>75</chance>
                     </li>
                     <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>33</chance>
+                        <defName>Homestuck_ColdBlooded_1</defName>
+                        <chance>100</chance>
                     </li>
                     <li>
                         <defName MayRequire="sarg.alphagenes">PsychicAbility_Dull</defName>
@@ -1293,12 +1302,8 @@
                         <chance>50</chance>
                     </li>
                     <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>66</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>66</chance>
+                        <defName>Homestuck_ColdBlooded_2</defName>
+                        <chance>100</chance>
                     </li>
                     <li>
                         <defName MayRequire="sarg.alphagenes">AG_InnatePsylink</defName>
@@ -1307,7 +1312,8 @@
                     <li>
                         <defName MayRequire="sarg.alphagenes">AG_SlowerAging</defName>
                         <chance>66</chance>
-                    </li>  </raceGenes>
+                    </li>  
+                </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
                     <li>                           
@@ -1370,11 +1376,7 @@
                         <chance>10</chance>
                     </li>
                     <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
+                        <defName>Homestuck_ColdBlooded_3</defName>
                         <chance>100</chance>
                     </li>
                     <li>
@@ -1453,11 +1455,7 @@
                         <chance>10</chance>
                     </li>
                     <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
-                        <defName>MaxTemp_SmallDecrease</defName>
+                        <defName>Homestuck_ColdBlooded_4</defName>
                         <chance>100</chance>
                     </li>
                     <li>

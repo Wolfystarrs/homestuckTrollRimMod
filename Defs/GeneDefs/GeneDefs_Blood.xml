@@ -4,7 +4,7 @@
 	<GeneCategoryDef>
 			<defName>Homestuck_Blood</defName>
 			<label>blood</label>
-			<displayPriorityInXenotype>272</displayPriorityInXenotype>
+			<displayPriorityInXenotype>274</displayPriorityInXenotype>
 			<displayPriorityInGenepack>-118</displayPriorityInGenepack>
 	</GeneCategoryDef>
 	
@@ -12,6 +12,10 @@
 		<defName>Homestuck_Blood</defName>
 		<label>Blood</label>
 		<displayCategory>Homestuck_Blood</displayCategory>
+		<exclusionTags>
+			<li>BloodType</li>
+			<li>Blood</li>
+		</exclusionTags>
 	</GeneDef>
 	
 	<ThingDef ParentName="BaseFilth" Abstract="True" Name="BaseTrollFilthBloodKind">
