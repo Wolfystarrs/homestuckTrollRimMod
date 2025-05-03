@@ -9,79 +9,79 @@
                             <kindDefs>
                                 <li>PawnkindTroll_Rust</li>
                             </kindDefs>
-                            <chance>35</chance>
+                            <chance>21</chance>
                         </li>  
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Bronze</li>
                             </kindDefs>
-                            <chance>30</chance>
+                            <chance>19</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Gold</li>
                             </kindDefs>
-                            <chance>15</chance>
+                            <chance>11</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Lime</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Mutant</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Olive</li>
                             </kindDefs>
-                            <chance>10</chance>
+                            <chance>9</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Jade</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Teal</li>
                             </kindDefs>
-                            <chance>5</chance>
+                            <chance>6</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Cerulean</li>
                             </kindDefs>
-                            <chance>2.5</chance>
+                            <chance>5</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Indigo</li>
                             </kindDefs>
-                            <chance>0.91</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Purple</li>
                             </kindDefs>
-                            <chance>0.05</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Violet</li>
                             </kindDefs>
-                            <chance>0.03</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Fuchsia</li>
                             </kindDefs>
-                            <chance>0.01</chance>
+                            <chance>4</chance>
                         </li>  
                     </pawnKindEntries>
                     <factionDefs>
@@ -96,79 +96,79 @@
                             <kindDefs>
                                 <li>PawnkindTroll_Rust</li>
                             </kindDefs>
-                            <chance>35</chance>
+                            <chance>21</chance>
                         </li>  
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Bronze</li>
                             </kindDefs>
-                            <chance>30</chance>
+                            <chance>19</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Gold</li>
                             </kindDefs>
-                            <chance>15</chance>
+                            <chance>11</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Lime</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Mutant</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Olive</li>
                             </kindDefs>
-                            <chance>10</chance>
+                            <chance>9</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Jade</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Teal</li>
                             </kindDefs>
-                            <chance>5</chance>
+                            <chance>6</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Cerulean</li>
                             </kindDefs>
-                            <chance>2.5</chance>
+                            <chance>5</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Indigo</li>
                             </kindDefs>
-                            <chance>0.91</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Purple</li>
                             </kindDefs>
-                            <chance>0.05</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Violet</li>
                             </kindDefs>
-                            <chance>0.03</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Fuchsia</li>
                             </kindDefs>
-                            <chance>0.01</chance>
+                            <chance>4</chance>
                         </li>  
                     </pawnKindEntries>
                     <factionDefs>
@@ -181,79 +181,79 @@
                             <kindDefs>
                                 <li>PawnkindTroll_Rust</li>
                             </kindDefs>
-                            <chance>35</chance>
+                            <chance>21</chance>
                         </li>  
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Bronze</li>
                             </kindDefs>
-                            <chance>30</chance>
+                            <chance>19</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Gold</li>
                             </kindDefs>
-                            <chance>15</chance>
+                            <chance>11</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Lime</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Mutant</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Olive</li>
                             </kindDefs>
-                            <chance>10</chance>
+                            <chance>9</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Jade</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Teal</li>
                             </kindDefs>
-                            <chance>5</chance>
+                            <chance>6</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Cerulean</li>
                             </kindDefs>
-                            <chance>2.5</chance>
+                            <chance>5</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Indigo</li>
                             </kindDefs>
-                            <chance>0.91</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Purple</li>
                             </kindDefs>
-                            <chance>0.05</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Violet</li>
                             </kindDefs>
-                            <chance>0.03</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Fuchsia</li>
                             </kindDefs>
-                            <chance>0.01</chance>
+                            <chance>4</chance>
                         </li>  
             </alienslavekinds>
             <alienrefugeekinds>
@@ -261,79 +261,79 @@
                             <kindDefs>
                                 <li>PawnkindTroll_Rust</li>
                             </kindDefs>
-                            <chance>35</chance>
+                            <chance>21</chance>
                         </li>  
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Bronze</li>
                             </kindDefs>
-                            <chance>30</chance>
+                            <chance>19</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Gold</li>
                             </kindDefs>
-                            <chance>15</chance>
+                            <chance>11</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Lime</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Mutant</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Olive</li>
                             </kindDefs>
-                            <chance>10</chance>
+                            <chance>9</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Jade</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Teal</li>
                             </kindDefs>
-                            <chance>5</chance>
+                            <chance>6</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Cerulean</li>
                             </kindDefs>
-                            <chance>2.5</chance>
+                            <chance>5</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Indigo</li>
                             </kindDefs>
-                            <chance>0.91</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Purple</li>
                             </kindDefs>
-                            <chance>0.05</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Violet</li>
                             </kindDefs>
-                            <chance>0.03</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Fuchsia</li>
                             </kindDefs>
-                            <chance>0.01</chance>
+                            <chance>4</chance>
                         </li>  
             </alienrefugeekinds>
         </pawnKindSettings>
@@ -408,79 +408,79 @@
                             <kindDefs>
                                 <li>PawnkindTroll_Rust</li>
                             </kindDefs>
-                            <chance>35</chance>
+                            <chance>21</chance>
                         </li>  
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Bronze</li>
                             </kindDefs>
-                            <chance>30</chance>
+                            <chance>19</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Gold</li>
                             </kindDefs>
-                            <chance>15</chance>
+                            <chance>11</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Lime</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Mutant</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                          <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Olive</li>
                             </kindDefs>
-                            <chance>10</chance>
+                            <chance>9</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Jade</li>
                             </kindDefs>
-                            <chance>0.5</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Teal</li>
                             </kindDefs>
-                            <chance>5</chance>
+                            <chance>6</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Cerulean</li>
                             </kindDefs>
-                            <chance>2.5</chance>
+                            <chance>5</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Indigo</li>
                             </kindDefs>
-                            <chance>0.91</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Purple</li>
                             </kindDefs>
-                            <chance>0.05</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Violet</li>
                             </kindDefs>
-                            <chance>0.03</chance>
+                            <chance>4</chance>
                         </li>
                         <li>
                             <kindDefs>
                                 <li>PawnkindTroll_Fuchsia</li>
                             </kindDefs>
-                            <chance>0.01</chance>
+                            <chance>4</chance>
                         </li>  
                     </pawnKindEntries>
                     <factionDefs>

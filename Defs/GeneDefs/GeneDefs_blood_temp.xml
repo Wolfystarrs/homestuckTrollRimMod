@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<GeneCategoryDef>
+			<defName>Troll_Temperature</defName>
+			<label>Trolls Temperature</label>
+			<displayPriorityInXenotype>272</displayPriorityInXenotype>
+			<displayPriorityInGenepack>-118</displayPriorityInGenepack>
+	</GeneCategoryDef>
+
+ <GeneDef Name="TrollGeneTempBase" Abstract="True">
+    <displayCategory>Troll_Temperature</displayCategory>
+    <exclusionTags>
+      <li>MinTemperature</li>
+      <li>MaxTemperature</li>
+    </exclusionTags>
+  </GeneDef>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>WarmBlooded_1</defName>
+    <label>Rust Warm</label>
+    <labelShortAdj>warm</labelShortAdj>
+    <description>Carriers of this gene are much more comfortable in warm temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MaxTemperatureLargeIncrease</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>6</ComfyTemperatureMin>
+      <ComfyTemperatureMax>6</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+        <li><symbol>hot</symbol></li>
+        <li><symbol>heat</symbol></li>
+        <li><symbol>sun</symbol></li>
+        <li><symbol>sweat</symbol></li>
+        <li><symbol>bake</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>WarmBlooded_2</defName>
+    <label>Bronze Warm</label>
+    <labelShortAdj>warm</labelShortAdj>
+    <description>Carriers of this gene are much more comfortable in warm temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MaxTemperatureLargeIncrease</iconPath>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>4</ComfyTemperatureMin>
+      <ComfyTemperatureMax>4</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+        <li><symbol>hot</symbol></li>
+        <li><symbol>heat</symbol></li>
+        <li><symbol>sun</symbol></li>
+        <li><symbol>sweat</symbol></li>
+        <li><symbol>bake</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>  
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>WarmBlooded_3</defName>
+    <label>Gold Warm</label>
+    <labelShortAdj>warm</labelShortAdj>
+    <description>Carriers of this gene are more comfortable in warm temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MaxTemperatureLargeIncrease</iconPath>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>3</ComfyTemperatureMin>
+      <ComfyTemperatureMax>3</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>hot</symbol></li>
+        <li><symbol>heat</symbol></li>
+        <li><symbol>sun</symbol></li>
+        <li><symbol>sweat</symbol></li>
+        <li><symbol>bake</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>  
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>WarmBlooded_4</defName>
+    <label>Lime Warm</label>
+    <labelShortAdj>warm</labelShortAdj>
+    <description>Carriers of this gene are slightly more comfortable in warm temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MaxTemperatureSmallIncrease</iconPath>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>2</ComfyTemperatureMin>
+      <ComfyTemperatureMax>2</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>warm</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>MidBlooded_1</defName>
+    <label>Olive Warm</label>
+    <labelShortAdj>warm</labelShortAdj>
+    <description>Carriers of this gene are slightly more comfortable in warm temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MaxTemperatureSmallIncrease</iconPath>
+    <displayOrderInCategory>5</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>1</ComfyTemperatureMin>
+      <ComfyTemperatureMax>1</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>warm</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>MidBlooded_2</defName>
+    <label>Jade Warm</label>
+    <labelShortAdj>warm</labelShortAdj>
+    <description>Carriers of this gene have normal tempurature comfortability.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureSmallIncrease</iconPath>
+    <displayOrderInCategory>6</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>0</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>warm</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>MidBlooded_3</defName>
+    <label>Teal Cold</label>
+    <labelShortAdj>cold</labelShortAdj>
+    <description>Carriers of this gene are slightly more comfortable in cold temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureSmallDecrease</iconPath>
+    <displayOrderInCategory>7</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-1</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-1</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>cold</symbol></li>
+        <li><symbol>cool</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>MidBlooded_4</defName>
+    <label>Cerulean Cold</label>
+    <labelShortAdj>cold</labelShortAdj>
+    <description>Carriers of this gene are slightly more comfortable in cold temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureSmallDecrease</iconPath>
+    <displayOrderInCategory>8</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-2</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-2</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>cold</symbol></li>
+        <li><symbol>cool</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>ColdBlooded_1</defName>
+    <label>Indigo Cold</label>
+    <labelShortAdj>cold</labelShortAdj>
+    <description>Carriers of this gene are more comfortable in cold temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureSmallDecrease</iconPath>
+    <displayOrderInCategory>9</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-3</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-3</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>cold</symbol></li>
+        <li><symbol>cool</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>ColdBlooded_2</defName>
+    <label>Purple Cold</label>
+    <labelShortAdj>cold</labelShortAdj>
+    <description>Carriers of this gene are much more comfortable in cold temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureLargeDecrease</iconPath>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-4</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-4</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>cold</symbol></li>
+        <li><symbol>cool</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>ColdBlooded_3</defName>
+    <label>Violet Cold</label>
+    <labelShortAdj>cold</labelShortAdj>
+    <description>Carriers of this gene are much more comfortable in cold temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureLargeDecrease</iconPath>
+    <displayOrderInCategory>11</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-5</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>cold</symbol></li>
+        <li><symbol>cool</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>
+  
+   <GeneDef ParentName="TrollGeneTempBase">
+    <defName>ColdBlooded_4</defName>
+    <label>Fuchsia Cold</label>
+    <labelShortAdj>cold</labelShortAdj>
+    <description>Carriers of this gene are much more comfortable in cold temperatures.</description>
+    <iconPath>UI/Icons/Genes/Gene_MinTemperatureLargeDecrease</iconPath>
+    <displayOrderInCategory>12</displayOrderInCategory>
+    <statOffsets>
+      <ComfyTemperatureMin>-6</ComfyTemperatureMin>
+      <ComfyTemperatureMax>-6</ComfyTemperatureMax>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>cold</symbol></li>
+        <li><symbol>cool</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>

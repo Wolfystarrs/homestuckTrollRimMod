@@ -14,7 +14,15 @@
                 <forcedRaceTraitEntries>
                 <li>
                     <defName>Bisexual</defName>
-                    <chance>100</chance>
+                    <chance>80</chance>
+                </li>
+                <li>
+                    <defName>Gay</defName>
+                    <chance>10</chance>
+                </li>
+                <li>
+                    <defName>Polyamory</defName>
+                    <chance>90</chance>
                 </li>
                 </forcedRaceTraitEntries>
                 <disallowedTraits>
@@ -418,10 +426,6 @@
                         <chance>30</chance>
                     </li>
                     <li>
-                        <defName MayRequire="sarg.alphagenes">AG_HeatRadiating</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
                         <defName>Homestuck_Blood_Candy_Red</defName>
                         <chance>3</chance>
                     </li>
@@ -540,14 +544,6 @@
                     <li>
                         <defName>MaxTemp_SmallIncrease</defName>
                         <chance>30</chance>
-                    </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_HeatRadiating</defName>
-                        <chance>30</chance>
-                    </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_ColdRadiating</defName>
-                        <chance>20</chance>
                     </li>
                     <li>
                         <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
@@ -670,10 +666,6 @@
                         <chance>100</chance>
                     </li>
                     <li>
-                        <defName MayRequire="sarg.alphagenes">AG_HeatRadiating</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
                         <chance>100</chance>
                     </li>
@@ -745,10 +737,6 @@
                     </li>
                     <li>
                         <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>66</chance>
-                    </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_HeatRadiating</defName>
                         <chance>66</chance>
                     </li>
                     <li>
@@ -838,10 +826,6 @@
                         <chance>33</chance>
                     </li>
                     <li>
-                        <defName MayRequire="sarg.alphagenes">AG_HeatRadiating</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">AG_FasterAging</defName>
                         <chance>33</chance>
                     </li>
@@ -925,10 +909,6 @@
                     </li>
                     <li>
                         <defName>MaxTemp_SmallIncrease</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_HeatRadiating</defName>
                         <chance>33</chance>
                     </li>
                     <li>
@@ -1042,6 +1022,7 @@
         <alienRace>
         <!--GENERAL SETTINGS-->
             <generalSettings>
+                <maleGenderProbability>0.2</maleGenderProbability>
                 <raceGenes>
                     <li>
                         <defName>Homestuck_Blood_Jade</defName>
@@ -1239,10 +1220,6 @@
                         <chance>33</chance>
                     </li>
                     <li>
-                        <defName MayRequire="sarg.alphagenes">AG_ColdRadiating</defName>
-                        <chance>33</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">PsychicAbility_Dull</defName>
                         <chance>100</chance>
                     </li>
@@ -1324,10 +1301,6 @@
                         <chance>66</chance>
                     </li>
                     <li>
-                        <defName MayRequire="sarg.alphagenes">AG_ColdRadiating</defName>
-                        <chance>66</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">AG_InnatePsylink</defName>
                         <chance>30</chance>
                     </li>
@@ -1405,10 +1378,6 @@
                         <chance>100</chance>
                     </li>
                     <li>
-                        <defName MayRequire="sarg.alphagenes">AG_ColdRadiating</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
                         <defName MayRequire="sarg.alphagenes">AG_SlowerAging</defName>
                         <chance>100</chance>
                     </li>
@@ -1465,6 +1434,7 @@
         <alienRace>
         <!--GENERAL SETTINGS-->
             <generalSettings>
+                <maleGenderProbability>0.2</maleGenderProbability>
                 <raceGenes>
                     <li>
                         <defName>Homestuck_Blood_Fuchsia</defName>
@@ -1488,10 +1458,6 @@
                     </li>
                     <li>
                         <defName>MaxTemp_SmallDecrease</defName>
-                        <chance>100</chance>
-                    </li>
-                    <li>
-                        <defName MayRequire="sarg.alphagenes">AG_ColdRadiating</defName>
                         <chance>100</chance>
                     </li>
                     <li>

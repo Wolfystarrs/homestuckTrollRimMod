@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Homestuck Trolls Xenotype</name>
+	<name>Homestuck Trolls Race</name>
 	<author>Wolfystarrs</author>
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<packageId>Xenotype.Homestuck.Trolls</packageId>
+	<packageId>Race.Homestuck.Trolls</packageId>
 	<description>
 Adds Trolls from homestuck as a race! Trolls are a grey-skinned, candy-corn-horned, violent race from alternia. 
 
