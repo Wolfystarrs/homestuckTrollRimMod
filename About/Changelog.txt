@@ -1,5 +1,8 @@
 # Changelog for HomestuckTrollsRace
 
+0.2.1 - Additions
+Added glassses
+
 0.2.0 - Rewrites, Additions, Balancing changes, Bug Fixes
 Rewrote blood code to use a template
 Changed eye code to fix a bug where eyes would hover outside of the head

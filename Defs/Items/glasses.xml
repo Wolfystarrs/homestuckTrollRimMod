@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- <ThingDef ParentName="HatMakeableBase" Name="Sunglasses_Base" Abstract="True">
+<ThingDef ParentName="HatMakeableBase" Name="Sunglasses_Base" Abstract="True">
 		<description>A pair of sunglasses protecting the wearer from dangerous UV rays. Often considered to be ‘cool’.</description>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -108,5 +108,5 @@
 		<apparel>
 			<wornGraphicPath>Glasses/AG_Glasses/vs_glasses</wornGraphicPath>
 		</apparel>
-</ThingDef> -->
+</ThingDef>
 </Defs> 
