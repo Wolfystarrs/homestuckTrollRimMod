@@ -5,17 +5,16 @@ Rewrote blood code to use a template
 Changed eye code to fix a bug where eyes would hover outside of the head
 Changed Psiionic eyes to use vanilla eye code instead of HAR body addons
 Adjusted chances so theres more troll variety
-Removed heat and cold radiating genes from trolls
+Removed heat and cold radiating genes from trolls and heat and cold difference
 Added a full set of unique textures for rainbow blood
 Added genes for trolls adjusting comfortable tempurature range
-Added dyable Egbert and Dirk glasses
-Added textures for NL Facial Animation
 Added more horn types
 Added Cerulean eyes gene
-Removed forced Night Owl trait but added high rates of bisexuality and polyamory for trolls 
+Added high rates of bisexuality and (psychology) polyamory for trolls 
 Added gender probability deviance for jade and fuchsia bloods
-Changed title to be more accurate
-Added metabolic gene to adjust for egg layer and insect jelly metabolic decreases
+Changed name to be more accurate
+Added metabolic shift to skin gene to adjust for egg layer and insect jelly metabolic decreases
+Fixed a bug where mutanbloods would spawn with no blood color
 
 0.1.0 - Initial release
 

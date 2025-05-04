@@ -2,35 +2,33 @@
 <Defs>
 
 <GeneDef>
-		<defName>Homestuck_Goldblood_Eyes</defName>
-		<label>Psiionic Eyes</label>
+		<defName>Homestuck_Goldblood_Eyes_Left</defName>
+		<label>Psiionic Eyes (Left)</label>
 		<labelShortAdj>Psiionic Eyes</labelShortAdj>
 		<displayCategory>Homestuck_Blood</displayCategory>
 		<description>Carriers of this gene have often heterochromic, solid color eyes.</description>
-		<iconPath>Eyes/GEyes</iconPath>
+		<iconPath>Eyes/Gold/Gold_Eyes_Texture1</iconPath>
 		<displayOrderInCategory>16</displayOrderInCategory>
 		<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Texture</texPath>
-				<anchorTag>RightEye</anchorTag>
-				<rotDrawMode>Fresh, Rotting</rotDrawMode>
-				<parentTagDef>Head</parentTagDef>
-				<drawSize>0.2</drawSize>
-				<side>Right</side>
-				<drawData>
-				<defaultData>
-				<layer>55</layer>
-				<offset>(0, 0, -0.25)</offset>
-				</defaultData>
-				</drawData>
-				<colors>
-					<li>(255, 0, 0)</li>
-					<li>(0, 255, 0)</li>
-					<li>(0, 0, 255)</li>
-				</colors>
-			</li>
-			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Eyes_Texture</texPath>
+				<texPaths>
+					<li>Eyes/Gold/Gold_Eyes_Texture</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture1</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture2</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture3</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture4</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture5</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture6</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture7</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture8</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture9</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture10</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture11</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture12</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture13</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture14</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture15</li>
+				</texPaths>
 				<anchorTag>LeftEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
@@ -46,26 +44,38 @@
 				<flip>false</flip>
 				</dataWest>
 				</drawData>
-				<colors>
-					<li>(255, 0, 0)</li>
-					<li>(0, 255, 0)</li>
-					<li>(0, 0, 255)</li>
-				</colors>
 			</li>
 		</renderNodeProperties>
 	</GeneDef>
 
 	<GeneDef>
-		<defName>Homestuck_Cerulean_Eyes</defName>
-		<label>Cerulean Polycoria</label>
-		<labelShortAdj>Cerulean Polycoria</labelShortAdj>
+		<defName>Homestuck_Goldblood_Eyes_Right</defName>
+		<label>Psiionic Eyes (Right)</label>
+		<labelShortAdj>Psiionic Eyes</labelShortAdj>
 		<displayCategory>Homestuck_Blood</displayCategory>
-		<description>Carriers of this gene have multiple pupils.</description>
-		<iconPath>Eyes/CEyes</iconPath>
+		<description>Carriers of this gene have often heterochromic, solid color eyes.</description>
+		<iconPath>Eyes/Gold/Gold_Eyes_Texture2</iconPath>
 		<displayOrderInCategory>16</displayOrderInCategory>
 		<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Cerulean/Cerulean_Eyes_Texture</texPath>
+				<texPaths>
+					<li>Eyes/Gold/Gold_Eyes_Texture</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture1</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture2</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture3</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture4</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture5</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture6</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture7</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture8</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture9</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture10</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture11</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture12</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture13</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture14</li>
+					<li>Eyes/Gold/Gold_Eyes_Texture15</li>
+				</texPaths>
 				<anchorTag>RightEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
@@ -77,10 +87,27 @@
 				<offset>(0, 0, -0.25)</offset>
 				</defaultData>
 				</drawData>
-				<color>(255, 0, 0)</color>
 			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>Homestuck_Cerulean_Eyes_Left</defName>
+		<label>Cerulean Polycoria (Left)</label>
+		<labelShortAdj>Cerulean Polycoria</labelShortAdj>
+		<displayCategory>Homestuck_Blood</displayCategory>
+		<description>Carriers of this gene have multiple pupils.</description>
+		<iconPath>Eyes/Cerulean/Cerulean_Eyes_Texture</iconPath>
+		<displayOrderInCategory>16</displayOrderInCategory>
+		<renderNodeProperties>
 			<li Class="PawnRenderNodeProperties_Eye">
-				<texPath>Eyes/Cerulean</texPath>
+				<texPaths>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture1</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture2</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture3</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture4</li>
+				</texPaths>
 				<anchorTag>LeftEye</anchorTag>
 				<rotDrawMode>Fresh, Rotting</rotDrawMode>
 				<parentTagDef>Head</parentTagDef>
@@ -96,7 +123,40 @@
 				<flip>false</flip>
 				</dataWest>
 				</drawData>
-				<color>(0, 0, 255)</color>
+				<color>(0, 65, 130)</color>
+			</li>
+		</renderNodeProperties>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>Homestuck_Cerulean_Eyes_Right</defName>
+		<label>Cerulean Polycoria (Right)</label>
+		<labelShortAdj>Cerulean Polycoria</labelShortAdj>
+		<displayCategory>Homestuck_Blood</displayCategory>
+		<description>Carriers of this gene have multiple pupils.</description>
+		<iconPath>Eyes/Cerulean/Cerulean_Eyes_Texture1</iconPath>
+		<displayOrderInCategory>16</displayOrderInCategory>
+		<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPaths>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture1</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture2</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture3</li>
+					<li>Eyes/Cerulean/Cerulean_Eyes_Texture4</li>
+				</texPaths>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
+				<drawData>
+				<defaultData>
+					<layer>55</layer>
+					<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(0, 65, 130)</color>
 			</li>
 		</renderNodeProperties>
 	</GeneDef>

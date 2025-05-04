@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <GeneCategoryDef>
+    <!-- <GeneCategoryDef>
 			<defName>Troll_Horns</defName>
 			<label>Troll Horns</label>
 			<displayPriorityInXenotype>273</displayPriorityInXenotype>
@@ -63,5 +63,5 @@
 				</drawData>
 			</li>
         </renderNodeProperties>
-    </GeneDef>
+    </GeneDef> -->
 </Defs>

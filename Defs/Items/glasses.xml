@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<ThingDef ParentName="HatMakeableBase" Name="Sunglasses_Base" Abstract="True">
+<!-- <ThingDef ParentName="HatMakeableBase" Name="Sunglasses_Base" Abstract="True">
 		<description>A pair of sunglasses protecting the wearer from dangerous UV rays. Often considered to be ‘cool’.</description>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -79,4 +79,34 @@
 			<wornGraphicPath>Glasses/EB_Glasses/eb_glasses</wornGraphicPath>
 		</apparel>
 </ThingDef>
-</Defs>
+<ThingDef ParentName="Sunglasses_Base">
+		<defName>HS_GG_glasses</defName>
+		<label>Circle Glasses</label>
+        <graphicData>
+			<texPath>Glasses/GG_Glasses/jh_glasses</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Glasses/GG_Glasses/jh_glasses</wornGraphicPath>
+		</apparel>
+</ThingDef>
+<ThingDef ParentName="Sunglasses_Base">
+		<defName>HS_TG_glasses</defName>
+		<label>Ben Stiller Glasses</label>
+        <graphicData>
+			<texPath>Glasses/TG_Glasses/ds_glasses</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Glasses/TG_Glasses/ds_glasses</wornGraphicPath>
+		</apparel>
+</ThingDef>
+<ThingDef ParentName="Sunglasses_Base">
+		<defName>HS_AG_glasses</defName>
+		<label>Vision 8-Fold Glasses</label>
+        <graphicData>
+			<texPath>Glasses/AG_Glasses/vs_glasses</texPath>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Glasses/AG_Glasses/vs_glasses</wornGraphicPath>
+		</apparel>
+</ThingDef> -->
+</Defs> 

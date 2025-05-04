@@ -408,77 +408,64 @@
                         <chance>0.01</chance>
                     </li>
                     <li>
-                        <defName>Homestuck_Blood_Candy_Red</defName>
-                        <chance>35</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Azure</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Bismuth</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Chartreuse</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Copper</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Ebony</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Electrum</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Emerald</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Iron</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Ivory</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Lilac</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Magenta</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Mint</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Pink</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Rainbow</defName>
-                        <chance>1</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Salmon</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Silver</defName>
-                        <chance>10</chance>
-                    </li>
-                    <li>
-                        <defName>Homestuck_Blood_Tungsten</defName>
-                        <chance>10</chance>
-                    </li>
+                        <options>
+                            <li>
+                                <defName>Homestuck_Blood_Candy_Red</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Azure</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Bismuth</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Chartreuse</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Copper</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Ebony</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Electrum</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Emerald</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Iron</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Ivory</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Lilac</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Magenta</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Mint</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Pink</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Rainbow</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Salmon</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Silver</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Blood_Tungsten</defName>
+                            </li>
+                        </options>
+                    <chance>100</chance>
+                </li>
                     <li>
                         <defName MayRequire="sarg.alphagenes">AG_UnderdevelopedTeeth</defName>
                         <chance>50</chance>
@@ -520,61 +507,72 @@
                         <chance>30</chance>
                     </li>
                     <li>
-                        <defName>Homestuck_Goldblood_Eyes</defName>
-                        <chance>6</chance>
+                        <options>
+                            <li>
+                                <defName>Homestuck_Cerulean_Eyes_Right</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Goldblood_Eyes_Right</defName>
+                            </li>
+                        </options>
+                        <chance>12</chance>
+                    </li>
+                    <li>
+                        <options>
+                            <li>
+                                <defName>Homestuck_Cerulean_Eyes_Left</defName>
+                            </li>
+                            <li>
+                                <defName>Homestuck_Goldblood_Eyes_Left</defName>
+                            </li>
+                        </options>
+                        <chance>12</chance>
                     </li>
                     <li>
                         <defName>Homestuck_Seadweller</defName>
                         <chance>5</chance>
                     </li>
                     <li>
+                        <options>
+                    <li>
                         <defName>Homestuck_WarmBlooded_1</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_WarmBlooded_2</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_WarmBlooded_3</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_WarmBlooded_4</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_MidBlooded_1</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_MidBlooded_2</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_MidBlooded_3</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_MidBlooded_4</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_ColdBlooded_1</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_ColdBlooded_2</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_ColdBlooded_3</defName>
-                        <chance>7</chance>
                     </li>
                     <li>
                         <defName>Homestuck_ColdBlooded_4</defName>
-                        <chance>7</chance>
                     </li>
+                </options>
+                <chance>100</chance>
+                </li>
                       </raceGenes>
                 <alienPartGenerator>
                         <colorChannels>
@@ -828,7 +826,11 @@
                         <chance>100</chance>
                     </li>
                     <li>
-                        <defName>Homestuck_Goldblood_Eyes</defName>
+                        <defName>Homestuck_Goldblood_Eyes_Right</defName>
+                        <chance>100</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_Goldblood_Eyes_Left</defName>
                         <chance>100</chance>
                     </li>
                       </raceGenes>
@@ -1161,6 +1163,14 @@
                     <li>
                         <defName>Homestuck_MidBlooded_4</defName>
                         <chance>100</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_Cerulean_Eyes_Left</defName>
+                        <chance>25</chance>
+                    </li>
+                    <li>
+                        <defName>Homestuck_Cerulean_Eyes_Right</defName>
+                        <chance>25</chance>
                     </li>
                 </raceGenes>
                 <alienPartGenerator>
