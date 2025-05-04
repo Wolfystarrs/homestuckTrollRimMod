@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!--EYES-->
+ <FacialAnimation.EyeballTypeDef>  
+  	<defName>Indigo_EyeNormal</defName>
+  	<texPath>Eyes/NL_Facial/Eyes/Normal</texPath>
+  	<altMaskPath>Eyes/NL_Facial/Eyes/Common</altMaskPath>
+    <shader>Map/CutoutSkinOverlay</shader>
+    <minColor>RGB(0, 33, 203)</minColor>
+    <maxColor>RGB(0, 33, 203)</maxColor>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.EyeballTypeDef>
+
+  <FacialAnimation.EyeballTypeDef>
+    <defName>Indigo_EyeWide</defName>
+    <texPath>Eyes/NL_Facial/Eyes/Wide</texPath>
+    <altMaskPath>Eyes/NL_Facial/Eyes/Common</altMaskPath>
+    <shader>Map/CutoutSkinOverlay</shader>
+    <minColor>RGB(0, 33, 203)</minColor>
+    <maxColor>RGB(0, 33, 203)</maxColor>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.EyeballTypeDef>
+
+  <FacialAnimation.EyeballTypeDef>
+    <defName>Indigo_EyePointy</defName>
+    <texPath>Eyes/NL_Facial/Eyes/Pointy</texPath>
+    <altMaskPath>Eyes/NL_Facial/Eyes/Common</altMaskPath>
+    <shader>Map/CutoutSkinOverlay</shader>
+    <minColor>RGB(0, 33, 203)</minColor>
+    <maxColor>RGB(0, 33, 203)</maxColor>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.EyeballTypeDef>
+
+    <FacialAnimation.EyeballTypeDef>
+    <defName>Indigo_EyeDull</defName>
+    <texPath>Eyes/NL_Facial/Eyes/Dull</texPath>
+      <altMaskPath>Eyes/NL_Facial/Eyes/Common</altMaskPath>
+      <shader>Map/CutoutSkinOverlay</shader>
+      <minColor>RGB(0, 33, 203)</minColor>
+    <maxColor>RGB(0, 33, 203)</maxColor>
+    <gender>Female</gender>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.EyeballTypeDef>
+  <!--LIDS-->
+  <FacialAnimation.LidTypeDef>
+	  <defName>Indigo_Troll_LidNormal</defName>
+	  <texPath>Eyes/NL_Facial/Lids/Normal</texPath>
+	  <shader>Map/Transparent</shader>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.LidTypeDef>
+
+  <FacialAnimation.LidTypeDef>
+    <defName>Indigo_Troll_LidPointy</defName>
+    <texPath>Eyes/NL_Facial/Lids/Pointy</texPath>
+    <shader>Map/Transparent</shader>
+    <gender>Female</gender>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.LidTypeDef>
+
+  <FacialAnimation.LidTypeDef>
+    <defName>Indigo_Troll_LidFlashy</defName>
+    <texPath>Eyes/NL_Facial/Lids/Flashy</texPath>
+    <shader>Map/Transparent</shader>
+    <gender>Female</gender>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.LidTypeDef>
+
+  <FacialAnimation.LidTypeDef>
+    <defName>Indigo_Troll_LidQuite</defName>
+    <texPath>Eyes/NL_Facial/Lids/Quite</texPath>
+    <shader>Map/Transparent</shader>
+    <gender>Female</gender>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.LidTypeDef>
+  
+    <FacialAnimation.LidTypeDef>
+    <defName>Indigo_Troll_LidSleepy</defName>
+    <texPath>Eyes/NL_Facial/Lids/Sleepy</texPath>
+    <shader>Map/Transparent</shader>
+    <gender>Female</gender>
+    <raceName>Troll_Indigo</raceName>
+  </FacialAnimation.LidTypeDef>
+
+
+</Defs>
