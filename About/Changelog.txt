@@ -1,5 +1,7 @@
 # Changelog for HomestuckTrollsRace
-
+0.2.2
+Added Mothergrub
+Reformatted file structures to be flush with Rimworld propper
 0.2.1 - Additions
 Added glassses
 

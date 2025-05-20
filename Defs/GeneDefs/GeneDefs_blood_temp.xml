@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <GeneCategoryDef>
-			<defName>Troll_Temperature</defName>
+			<defName>HS_Troll_Temperature</defName>
 			<label>Trolls Temperature</label>
 			<displayPriorityInXenotype>275</displayPriorityInXenotype>
 			<displayPriorityInGenepack>-118</displayPriorityInGenepack>
 	</GeneCategoryDef>
 
  <GeneDef Name="TrollGeneTempBase" Abstract="True">
-    <displayCategory>Troll_Temperature</displayCategory>
+    <displayCategory>HS_Troll_Temperature</displayCategory>
     <exclusionTags>
       <li>MinTemperature</li>
       <li>MaxTemperature</li>

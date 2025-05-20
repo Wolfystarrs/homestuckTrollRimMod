@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ScenarioDef>
-        <defName>TrollScenarioClassic</defName>
+        <defName>HS_TrollScenarioClassic</defName>
         <label>Troll Crashlanded</label>
         <description> Wrongdoers, Misfits, or just Innocents being wrongfully sentenced. All crammed into one giant interstellar prisoner transport ship. Next thing you know, there's metal ripping and sirens ringing. You manage to board and eject from an escape pod right as the ship explodes. Welcome to Rimworld, let's get the party started. </description>
             <scenario>

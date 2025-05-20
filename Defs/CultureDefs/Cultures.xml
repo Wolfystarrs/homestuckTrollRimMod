@@ -5,7 +5,7 @@
     <defName>HS_Tradition</defName>
     <label>Alternian Tradition</label>
     <description>Culture from alternia.</description>
-	<pawnNameMaker MayRequire="Ludeon.RimWorld.Ideology">TrollNamer</pawnNameMaker>
+	<pawnNameMaker MayRequire="Ludeon.RimWorld.Ideology">HS_TrollNamer</pawnNameMaker>
     <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoRustican</ideoNameMaker>
     <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityRustican</deityNameMaker>
     <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerRustican</deityTypeMaker>

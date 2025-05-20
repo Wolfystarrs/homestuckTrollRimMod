@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 <RulePackDef>
-<defName>TrollNamer</defName>
+<defName>HS_TrollNamer</defName>
 <rulePack>
 <include>
 <li>TrollFirstName</li>

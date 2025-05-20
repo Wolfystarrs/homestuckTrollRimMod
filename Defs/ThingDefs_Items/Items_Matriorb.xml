@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--Matriorb-->
+  <ThingDef ParentName="EggFertBase">
+    <defName>HS_Matriorb</defName>
+    <label>matriorb</label>
+    <description>A matriorb. If all goes well, it should hatch into a mother grub, nessecary for spawning more trolls. It can be eaten raw, but it's much better cooked.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>4000.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>60</hatcherDaystoHatch>
+        <hatcherPawn>HS_MotherGrub</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
