@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <FactionDef ParentName="PlayerFactionBase">
+      <defName>TrollPlayerColony</defName>
+      <label>Troll New Arrivals</label>
+      <description>A bundle of trouble</description>
+      <isPlayer>true</isPlayer>
+      <basicMemberKind>PawnkindTroll_Rust</basicMemberKind>
+      <pawnSingular>Troll</pawnSingular>
+      <pawnsPlural>Trolls</pawnsPlural>
+      <techLevel>Spacer</techLevel>
+      <backstoryFilters>
+        <li>
+          <categories>
+            <li>Offworld</li>
+          </categories>
+        </li>
+      </backstoryFilters>
+      <factionIconPath>UI/Troll_Hive</factionIconPath>
+      <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+      <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+      <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+      <startingResearchTags>
+        <li>ClassicStart</li>
+      </startingResearchTags>
+      <startingTechprintsResearchTags>
+        <li>ClassicStart</li>
+        <li>ClassicStartTechprints</li>
+      </startingTechprintsResearchTags>
+      <allowedCultures>
+        <li>HS_Tradition</li>
+      </allowedCultures>
+      <apparelStuffFilter>
+        <thingDefs>
+          <li>Synthread</li>
+        </thingDefs>
+      </apparelStuffFilter>
+  </FactionDef>  
+</Defs>
