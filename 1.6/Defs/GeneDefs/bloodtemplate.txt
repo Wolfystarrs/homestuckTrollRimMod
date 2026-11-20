@@ -1,0 +1,94 @@
+	<GeneDef ParentName="BaseTrollBloodKindMutant">
+		<defName>Homestuck_Blood_Tungsten</defName>
+		<label>tungsten blood</label>
+		<labelShortAdj>tungsten-blood</labelShortAdj>
+		<description>Carriers of this gene have tungsten blood.</description>
+		<iconPath>UI/Gene_Blood</iconPath>
+		<iconColor>(26, 69, 30)</iconColor>
+			<renderNodeProperties>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>RightEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Right</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				</defaultData>
+				</drawData>
+				<color>(26, 69, 30)</color>
+			</li>
+			<li Class="PawnRenderNodeProperties_Eye">
+				<texPath>Eyes/Eyes_Texture</texPath>
+				<anchorTag>LeftEye</anchorTag>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<parentTagDef>Head</parentTagDef>
+				<drawSize>0.2</drawSize>
+				<side>Left</side>
+				<drawData>
+				<defaultData>
+				<layer>54</layer>
+				<offset>(0, 0, -0.25)</offset>
+				<flip>true</flip>
+				</defaultData>
+				<dataWest>
+				<flip>false</flip>
+				</dataWest>
+				</drawData>
+				<color>(26, 69, 30)</color>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<customBloodThingDef>Troll_Filth_BloodTungsten</customBloodThingDef>
+				<customBloodIcon>Medical/BleedingTungsten</customBloodIcon>
+				<customBloodEffect>Troll_Damage_BloodTungsten</customBloodEffect>
+				<customWoundsFromFleshtype>Troll_Flesh_BloodTungsten</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<ThingDef ParentName="BaseTrollFilthBloodKind">
+		<defName>Troll_Filth_BloodTungsten</defName>
+		<graphicData>
+			<texPath>Things/Filth/Spatter</texPath>
+			<color>(26, 69, 30, 180)</color>
+		</graphicData>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>Troll_Damage_BloodTungsten</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>BloodSplash</fleckDef>
+				<burstCount>2~3</burstCount>
+				<scale>1.1~1.4</scale>
+				<color>(26, 69, 30, 180)</color>
+				<spawnLocType>OnSource</spawnLocType>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<FleshTypeDef ParentName="BaseTrollFleshBloodKind">
+		<defName>Troll_Flesh_BloodTungsten</defName>
+		<damageEffecter>Troll_Damage_BloodTungsten</damageEffecter>
+		<genericWounds>
+			<li>
+				<texture>Medical/WoundFleshA</texture>
+				<color>(26, 69, 30)</color>
+			</li>
+			<li>
+				<texture>Medical/WoundFleshB</texture>
+				<color>(26, 69, 30)</color>
+			</li>
+			<li>
+				<texture>Medical/WoundFleshC</texture>
+				<color>(26, 69, 30)</color>
+			</li>
+		</genericWounds>
+	</FleshTypeDef>
