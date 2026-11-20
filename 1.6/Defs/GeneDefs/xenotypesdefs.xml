@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Rust_Troll</defName>
+    <label>rust troll</label>
+    <description>A weird being</description>
+    <descriptionShort>A weird being</descriptionShort>
+    <iconPath>UI/xenotypeIcon</iconPath>
+    <inheritable>true</inheritable>
+    <combatPowerFactor>1.6</combatPowerFactor>
+    <genes>
+      <li>Homestuck_Troll_Skin</li>
+      <li>UVSensitivity_Mild</li>
+      <li>Body_Standard</li>
+      <li>Ears_Human</li>
+      <li>Hands_Human</li>
+      <li>DarkVision</li>
+      <li>Hair_InkBlack</li>
+      <li MayRequire="sarg.alphagenes">AG_JellyFlesh</li>
+      <li MayRequire="sarg.alphagenes">AG_LowLeather</li>
+      <li MayRequire="sarg.alphagenes">AG_EfficientMandibles</li>
+      <li MayRequire="sarg.alphagenes">AG_EggLaying</li>
+      <li MayRequire="sarg.alphagenes">AG_NightOwl</li>
+
+      <li>Homestuck_Blood_Rust</li>
+      <li>Homestuck_WarmBlooded_1</li>
+      <li MayRequire="sarg.alphagenes">AG_FasterAging</li>
+      <li MayRequire="sarg.alphagenes">AG_InnatePsylink</li>
+    </genes>
+  </XenotypeDef>
+</Defs>
