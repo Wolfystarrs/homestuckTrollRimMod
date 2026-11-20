@@ -1,0 +1,22 @@
+<Def>
+  <ThingDef ParentName="LeatherBase">
+    <defName>HS_Leather_MotherGrub</defName>
+    <label>bluefur</label>
+    <description>The skin of a Mother Grub.</description>
+    <possessionCount>50</possessionCount>
+    <graphicData>
+      <color>(100,100,100)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>10.3</MarketValue>
+      <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(100,100,100)</color>
+      <commonality>0.0025</commonality>
+      <statFactors>
+        <Beauty>0.5</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Def>
